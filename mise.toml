@@ -20,7 +20,7 @@ run = "trap 'kill 0' SIGINT && python -m http.server 3000 & zensical serve -f ze
 description = "Formats the project"
 run = "umbra fmt"
 
-[tasks.check]
+[tasks.lint]
 description = "Check code quality without modifying files"
 tools = { "cargo:selene" = "latest" }
 run = "umbra fmt --check src && selene src/*"
